@@ -18,11 +18,11 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <!-- <li class="nav-item active">
                         <a class="nav-link" href="formularioRegistro.php">Home <span class="sr-only">(current)</span></a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="listadoUsuarios.php">Productos</a>
+                        <a class="nav-link" href="listaProductos.php">Productos</a>
                     </li>
                 </ul>
             </div>
@@ -44,7 +44,7 @@
                         <input type="text" class="form-control" placeholder="editorial " name="editorial">
                     </div>
                     <div class="col-md-3">
-                        <input type="text" class="form-control" placeholder="Isbn" name="isbn">
+                        <input type="text" class="form-control" placeholder="Autor" name="autor">
                     </div>
                 </div>
                 <br>
@@ -70,7 +70,7 @@
                         <br>
                         <br>
                         <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="submit" class="btn btn-primary btn-sm" name="botonEnvio">Registrar Producto</button>
+                    <button type="submit" class="btn btn-outline-dark" name="botonEnvio">Registrar Producto</button>
                     </div>
                 </div>
                 <div class="row">
