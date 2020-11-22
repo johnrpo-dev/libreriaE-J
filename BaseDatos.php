@@ -53,6 +53,44 @@ class BaseDatos
 
         return($consultaBuscarDatos->fetchAll());
     }
+    public function eliminarDatos($consultaSQL)
+    {
+        $conexionBD = $this->conectarBD();
+
+        $EliminarDatos = $conexionBD->prepare($consultaSQL);
+
+        $EliminarDatos=$conexionBD->prepare($consultaSQL);
+        
+        $resultado=$EliminarDatos->execute();
+
+        if($resultado)
+        {
+            echo("Eliminacion de Datos Exitoso");
+        }else
+        {
+            echo("error Eliminando datos");
+        }
+
+
+
+    }
+    public function editarDatos($consultaSQL)
+    {
+        $conexionBD = $this->conectarBD();
+
+        $consultaEditarDatos=$conexionBD->prepare($consultaSQL);
+
+        $resultado=$consultaEditarDatos->execute();
+
+        if($resultado)
+        {
+            echo("Exito Editando los datos");
+        }else
+        {
+            echo("error Editando los datos");
+        }
+
+    }
 }
 
 

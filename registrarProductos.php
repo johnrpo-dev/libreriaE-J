@@ -9,16 +9,20 @@
         $editorial = $_POST["editorial"];
         $autor = $_POST["autor"];
         $formato = $_POST["formato"];
-        $foto = $_POST["foto"];
+        $paginas = $_POST["paginas"];
         $precio = $_POST["precio"];
         $descripcion = $_POST["descripcion"];
+        $foto = $_POST["foto"];
 
 
         $transaccion = new BaseDatos();
 
-        $consultaSQL = "INSERT INTO productos(nombre, editorial,autor,formato,foto,precio,descripcion) VALUES ('$nombre','$editorial','$autor','$formato','$foto','$precio','$descripcion')";
+        $consultaSQL = "INSERT INTO productos(nombre, editorial,autor,formato,paginas,precio,descripcion,foto) VALUES ('$nombre','$editorial','$autor','$formato','$paginas','$precio','$descripcion','$foto')";
 
         $transaccion->agregarDatos($consultaSQL);
+
+        header("location:listaProductos.php");
+
 
         
     }
